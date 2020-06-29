@@ -1,0 +1,26 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column formu">
+    <h2 class="ui orange image header">
+      <div class="content">
+        Signup to start chatting
+      </div>
+    </h2>  
+    <%= form_for(:user, html:{class:"ui large form", role:"form"}, url: signup_path) do |f| %>
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <%= f.text_field :username, placeholder:"Username" %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <%= f.text_field :password, placeholder:"Password" %>
+          </div>
+        </div>
+        <%= f.button "Signup", class:"ui orange submit button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
